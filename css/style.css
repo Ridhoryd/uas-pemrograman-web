@@ -1,474 +1,529 @@
-/* Global styles */
+/* Global styles - Glassmorphism Design */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f2f2f2;
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     color: #333;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Navbar */
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 90%, rgba(0, 212, 255, 0.3) 0%, transparent 50%);
+    animation: backgroundAnimation 15s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes backgroundAnimation {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Navbar - Glassmorphism */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background-color: #004c8c; /* Blue background */
-    color: white;
-    border-radius: 5px;
+    padding: 20px 60px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .logo h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin: 0;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
+    }
 }
 
 .navbar nav ul {
     display: flex;
+    gap: 10px;
     list-style: none;
-}
-
-.navbar nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 .navbar nav ul li a {
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar nav ul li a:hover {
-    color: #ffcc00; /* Yellow on hover */
+    background: rgba(102, 126, 234, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
 }
 
-/* Styling for the container and title */
+/* Container */
 .container {
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    max-width: 1200px;
+    padding: 60px 20px;
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: #f7f4f1;
 }
 
+/* Dashboard Title */
 h2 {
     text-align: center;
-    color: #3e2723; /* Darker text for the title */
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* Styling for the content section */
-.content {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* Styling for the list of topics and items */
-ul {
-    margin-left: 20px;
-    list-style-type: disc;
-    margin-bottom: 30px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-h4 {
-    font-size: 22px;
-    color: #3e2723;
-    margin-top: 20px;
-}
-
-.next {
-    text-align: center;
-    margin-top: 40px; /* Memberikan jarak lebih besar antara konten dan tombol */
-}
-
-.next a {
-    padding: 10px 30px;  /* Menambah padding kiri-kanan untuk memperbesar tombol */
-    background-color: #004c8c;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 56px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    letter-spacing: 3px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
-    display: inline-block; /* Pastikan tombol memiliki bentuk yang konsisten */
-    margin-top: 20px; /* Jarak atas tombol */
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease;
 }
 
-.next a:hover {
-    background-color: #ffcc00;
-    color: #003366;
+/* Course Grid */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    animation: fadeInUp 1s ease;
 }
 
-
-
-/* Footer Styling */
-footer {
-    background-color: #003366; /* Dark Blue */
+/* Glassmorphism Card */
+.course-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     padding: 30px;
-    font-family: 'Arial', sans-serif;
-    border-top: 3px solid #f1c40f; /* Gold line */
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 130px;
 }
 
-footer .footer-container {
+/* Glow Border Effect */
+.course-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.course-item:hover::before {
+    opacity: 1;
+    animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Arrow Icon */
+.course-item::after {
+    content: '→';
+    position: absolute;
+    right: 30px;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.course-item:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: #667eea;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+}
+
+/* Hover Effects */
+.course-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 20px 60px rgba(102, 126, 234, 0.4),
+        inset 0 0 50px rgba(102, 126, 234, 0.1);
+}
+
+/* Number Badge */
+.course-item-number {
+    min-width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    position: relative;
+}
+
+.course-item:hover .course-item-number {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+}
+
+/* Course Text */
+.course-item-text {
+    flex: 1;
+    z-index: 1;
+}
+
+.course-item-text strong {
+    font-size: 19px;
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.course-item-text p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.course-item:hover .course-item-text strong {
+    color: #667eea;
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 80px;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
 }
 
 footer .footer-info p {
     font-size: 14px;
-    color: white;
-    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 8px 0;
     text-align: center;
-}
-/* Update course-list */
-.course-list {
-    display: flex;
-    flex-direction: column;  /* Membuat daftar menjadi vertikal (kolom) */
-    gap: 10px;  /* Memberikan jarak antar item */
-    margin-top: 20px;  /* Jarak di atas daftar */
+    line-height: 1.8;
 }
 
-/* Update course-item */
+footer .footer-info p:first-child {
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Animation */
 .course-item {
-    background-color: #ffffff; /* Latar belakang putih untuk setiap item */
-    color: #6c4f2d; /* Warna teks gelap */
-    padding: 15px;
-    font-size: 18px;
-    text-decoration: none;
-    border: 2px solid #6c4f2d; /* Garis di sekitar setiap item */
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi ketika hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 0.6s ease forwards;
+    opacity: 0;
 }
 
-/* Hover effect */
-.course-item:hover {
-    background-color: #f2e0c9; /* Latar belakang kuning terang saat hover */
-    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+.course-item:nth-child(1) { animation-delay: 0.1s; }
+.course-item:nth-child(2) { animation-delay: 0.15s; }
+.course-item:nth-child(3) { animation-delay: 0.2s; }
+.course-item:nth-child(4) { animation-delay: 0.25s; }
+.course-item:nth-child(5) { animation-delay: 0.3s; }
+.course-item:nth-child(6) { animation-delay: 0.35s; }
+.course-item:nth-child(7) { animation-delay: 0.4s; }
+.course-item:nth-child(8) { animation-delay: 0.45s; }
+.course-item:nth-child(9) { animation-delay: 0.5s; }
+.course-item:nth-child(10) { animation-delay: 0.55s; }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* Gaya untuk elemen pertama dan genap/ganjil */
-.course-item:nth-child(even) {
-    background-color: #f2f2f2; /* Latar belakang abu-abu muda untuk item genap */
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.course-item:nth-child(odd) {
-    background-color: #ffffff; /* Latar belakang putih untuk item ganjil */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.course-item:focus {
-    outline: none;
-    box-shadow: 0 0 10px #8b6237; /* Sorot item saat fokus */
-}
-/* Navbar - Header */
-.navbar {
-    display: flex;
-    justify-content: center; /* Memusatkan item dalam navbar */
-    align-items: center;
-    padding: 15px;
-    background-color: #004c8c; /* Biru latar belakang */
-    color: white;
-    border-radius: 5px;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
 }
 
-/* Navbar Links */
-.navbar nav ul {
-    display: flex;
-    gap: 30px; /* Memberikan jarak antara setiap tautan */
-    list-style: none;
-}
-
-/* Navbar Link Style */
-.navbar nav ul li {
-    margin: 0;
-}
-
-.navbar nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-    padding: 10px;
-    font-weight: bold;
-}
-
-/* Hover Effect */
-.navbar nav ul li a:hover {
-    color: #ffcc00; /* Warna kuning pada hover */
-    text-decoration: underline;
-}
-
-/* Membuat Header lebih tinggi */
-header {
-    background-color: #003366; /* Warna biru tua */
-    padding: 20px 0;
-    text-align: center;
-}
-
-header .logo h1 {
-    font-size: 36px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: #ffcc00; /* Hover efek kuning */
-}
-
-/* Add padding to footer as well */
-footer {
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-}
-/* Global styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-/* Navbar - Header */
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Membuat konten navbar berada di kiri dan kanan */
-    align-items: center;
-    padding: 15px;
-    background-color: #004c8c; /* Biru latar belakang */
-    color: white;
-    border-radius: 5px;
-}
-
-/* Logo di sebelah kiri */
-.navbar .logo h1 {
-    font-size: 24px;
-    margin: 0;
-    text-align: left; /* Logo ditaruh di kiri */
-}
-
-/* Navbar Links - Menempatkan menu ke sebelah kanan */
-.navbar nav ul {
-    display: flex;
-    gap: 30px; /* Memberikan jarak antara setiap tautan */
-    list-style: none;
-    margin: 0;
-}
-
-/* Tautan Navbar */
-.navbar nav ul li {
-    margin: 0;
-}
-
-/* Styling untuk link */
-.navbar nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-    font-weight: bold;
-    padding: 10px;
-}
-
-/* Hover effect */
-.navbar nav ul li a:hover {
-    color: #ffcc00; /* Warna kuning pada hover */
-    text-decoration: underline;
-}
-
-/* Responsif Navbar */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Mengubah navbar menjadi kolom pada layar kecil */
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
     }
-    .navbar nav ul {
-        justify-content: center; /* Tautan akan berada di tengah jika lebar layar kecil */
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    .course-list {
+        grid-template-columns: 1fr;
     }
 }
-
-/* Styling for the container and title */
+/* Container */
 .container {
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    max-width: 1200px;
+    padding: 60px 20px;
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: #f7f4f1;
 }
 
+/* Title Pertemuan - Lebih Terang */
 h2 {
     text-align: center;
-    color: #3e2723; /* Darker text for the title */
-    font-size: 28px;
+    color: #ffffff; /* Putih murni */
+    font-size: 56px;
     margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    animation: fadeInDown 0.8s ease;
 }
 
-/* Styling for the content section */
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #ffffff; /* Putih murni */
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease;
+}
+
+/* Content Text - Pastikan Semua Teks Terang */
 .content {
     font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* Styling for the list of topics and items */
-ul {
-    margin-left: 20px;
-    list-style-type: disc;
+    line-height: 1.8;
+    color: #f0f0f0; /* Putih keabuan terang */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
 
-li {
-    margin-bottom: 10px;
+/* List Items */
+.content ul {
+    margin-left: 30px;
+    list-style-type: disc;
+    color: #f0f0f0; /* Putih keabuan terang */
 }
 
-h4 {
+.content li {
+    margin-bottom: 15px;
+    color: #f0f0f0; /* Putih keabuan terang */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading dalam content */
+.content h3,
+.content h4 {
+    color: #ffffff; /* Putih murni */
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content h3 {
+    font-size: 28px;
+}
+
+.content h4 {
     font-size: 22px;
-    color: #3e2723;
-    margin-top: 20px;
 }
 
+/* Paragraph dalam content */
+.content p {
+    color: #f0f0f0; /* Putih keabuan terang */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Strong/Bold text */
+.content strong,
+.content b {
+    color: #ffcc00; /* Kuning untuk emphasis */
+    font-weight: 700;
+}
+
+/* Link dalam content */
+.content a {
+    color: #66d9ff; /* Biru terang */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.content a:hover {
+    color: #ffcc00; /* Kuning saat hover */
+}
+
+/* Tombol Next */
 .next {
     text-align: center;
-    margin-top: 40px; /* Memberikan jarak lebih besar antara konten dan tombol */
+    margin-top: 50px;
 }
 
 .next a {
-    padding: 10px 30px;  /* Menambah padding kiri-kanan untuk memperbesar tombol */
-    background-color: #004c8c;
-    color: white;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff; /* Putih murni */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 18px;
-    display: inline-block; /* Pastikan tombol memiliki bentuk yang konsisten */
-    margin-top: 20px; /* Jarak atas tombol */
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .next a:hover {
-    background-color: #ffcc00;
-    color: #003366;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
 }
-
-/* Footer Styling */
-footer {
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    padding: 30px;
-    font-family: 'Arial', sans-serif;
-    border-top: 3px solid #f1c40f; /* Gold line */
-}
-
-footer .footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer .footer-info p {
-    font-size: 14px;
-    color: white;
-    margin: 5px 0;
+/* Fix cepat untuk next section */
+.next {
+    margin-top: 70px;
+    padding: 50px 20px;
     text-align: center;
 }
 
-/* Update course-list */
-.course-list {
-    display: flex;
-    flex-direction: column;  /* Membuat daftar menjadi vertikal (kolom) */
-    gap: 10px;  /* Memberikan jarak antar item */
-    margin-top: 20px;  /* Jarak di atas daftar */
+.next * {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
 }
 
-/* Update course-item */
-.course-item {
-    background-color: #ffffff; /* Latar belakang putih untuk setiap item */
-    color: #6c4f2d; /* Warna teks gelap */
-    padding: 15px;
-    font-size: 18px;
-    text-decoration: none;
-    border: 2px solid #6c4f2d; /* Garis di sekitar setiap item */
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi ketika hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.next p {
+    font-size: 20px !important;
+    margin-bottom: 35px !important;
+    font-weight: 600 !important;
 }
 
-/* Hover effect */
-.course-item:hover {
-    background-color: #f2e0c9; /* Latar belakang kuning terang saat hover */
-    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+.next a {
+    padding: 20px 50px !important;
+    font-size: 20px !important;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border-radius: 50px !important;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5) !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
 }
 
-/* Gaya untuk elemen pertama dan genap/ganjil */
-.course-item:nth-child(even) {
-    background-color: #f2f2f2; /* Latar belakang abu-abu muda untuk item genap */
-}
-
-.course-item:nth-child(odd) {
-    background-color: #ffffff; /* Latar belakang putih untuk item ganjil */
-}
-
-.course-item:focus {
-    outline: none;
-    box-shadow: 0 0 10px #8b6237; /* Sorot item saat fokus */
-}
-/* Styling untuk halaman About Us */
-.about-us {
-    background-image: url('jpg/bguas.jpeg'); /* Path gambar relatif */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 40px;
-    color: white;
-}
-
-
-.about-us h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about-us p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
+.next a:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.7) !important;
 }
