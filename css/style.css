@@ -1,0 +1,474 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #004c8c; /* Blue background */
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
+/* Styling for the container and title */
+.container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7f4f1;
+}
+
+h2 {
+    text-align: center;
+    color: #3e2723; /* Darker text for the title */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the content section */
+.content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Styling for the list of topics and items */
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 22px;
+    color: #3e2723;
+    margin-top: 20px;
+}
+
+.next {
+    text-align: center;
+    margin-top: 40px; /* Memberikan jarak lebih besar antara konten dan tombol */
+}
+
+.next a {
+    padding: 10px 30px;  /* Menambah padding kiri-kanan untuk memperbesar tombol */
+    background-color: #004c8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block; /* Pastikan tombol memiliki bentuk yang konsisten */
+    margin-top: 20px; /* Jarak atas tombol */
+}
+
+.next a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #f1c40f; /* Gold line */
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-info p {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+    text-align: center;
+}
+/* Update course-list */
+.course-list {
+    display: flex;
+    flex-direction: column;  /* Membuat daftar menjadi vertikal (kolom) */
+    gap: 10px;  /* Memberikan jarak antar item */
+    margin-top: 20px;  /* Jarak di atas daftar */
+}
+
+/* Update course-item */
+.course-item {
+    background-color: #ffffff; /* Latar belakang putih untuk setiap item */
+    color: #6c4f2d; /* Warna teks gelap */
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid #6c4f2d; /* Garis di sekitar setiap item */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi ketika hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.course-item:hover {
+    background-color: #f2e0c9; /* Latar belakang kuning terang saat hover */
+    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+}
+
+/* Gaya untuk elemen pertama dan genap/ganjil */
+.course-item:nth-child(even) {
+    background-color: #f2f2f2; /* Latar belakang abu-abu muda untuk item genap */
+}
+
+.course-item:nth-child(odd) {
+    background-color: #ffffff; /* Latar belakang putih untuk item ganjil */
+}
+
+.course-item:focus {
+    outline: none;
+    box-shadow: 0 0 10px #8b6237; /* Sorot item saat fokus */
+}
+/* Navbar - Header */
+.navbar {
+    display: flex;
+    justify-content: center; /* Memusatkan item dalam navbar */
+    align-items: center;
+    padding: 15px;
+    background-color: #004c8c; /* Biru latar belakang */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Navbar Links */
+.navbar nav ul {
+    display: flex;
+    gap: 30px; /* Memberikan jarak antara setiap tautan */
+    list-style: none;
+}
+
+/* Navbar Link Style */
+.navbar nav ul li {
+    margin: 0;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.navbar nav ul li a:hover {
+    color: #ffcc00; /* Warna kuning pada hover */
+    text-decoration: underline;
+}
+
+/* Membuat Header lebih tinggi */
+header {
+    background-color: #003366; /* Warna biru tua */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Hover efek kuning */
+}
+
+/* Add padding to footer as well */
+footer {
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Navbar - Header */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Membuat konten navbar berada di kiri dan kanan */
+    align-items: center;
+    padding: 15px;
+    background-color: #004c8c; /* Biru latar belakang */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Logo di sebelah kiri */
+.navbar .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: left; /* Logo ditaruh di kiri */
+}
+
+/* Navbar Links - Menempatkan menu ke sebelah kanan */
+.navbar nav ul {
+    display: flex;
+    gap: 30px; /* Memberikan jarak antara setiap tautan */
+    list-style: none;
+    margin: 0;
+}
+
+/* Tautan Navbar */
+.navbar nav ul li {
+    margin: 0;
+}
+
+/* Styling untuk link */
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Hover effect */
+.navbar nav ul li a:hover {
+    color: #ffcc00; /* Warna kuning pada hover */
+    text-decoration: underline;
+}
+
+/* Responsif Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Mengubah navbar menjadi kolom pada layar kecil */
+    }
+    .navbar nav ul {
+        justify-content: center; /* Tautan akan berada di tengah jika lebar layar kecil */
+    }
+}
+
+/* Styling for the container and title */
+.container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7f4f1;
+}
+
+h2 {
+    text-align: center;
+    color: #3e2723; /* Darker text for the title */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the content section */
+.content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Styling for the list of topics and items */
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 22px;
+    color: #3e2723;
+    margin-top: 20px;
+}
+
+.next {
+    text-align: center;
+    margin-top: 40px; /* Memberikan jarak lebih besar antara konten dan tombol */
+}
+
+.next a {
+    padding: 10px 30px;  /* Menambah padding kiri-kanan untuk memperbesar tombol */
+    background-color: #004c8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block; /* Pastikan tombol memiliki bentuk yang konsisten */
+    margin-top: 20px; /* Jarak atas tombol */
+}
+
+.next a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #f1c40f; /* Gold line */
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-info p {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Update course-list */
+.course-list {
+    display: flex;
+    flex-direction: column;  /* Membuat daftar menjadi vertikal (kolom) */
+    gap: 10px;  /* Memberikan jarak antar item */
+    margin-top: 20px;  /* Jarak di atas daftar */
+}
+
+/* Update course-item */
+.course-item {
+    background-color: #ffffff; /* Latar belakang putih untuk setiap item */
+    color: #6c4f2d; /* Warna teks gelap */
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid #6c4f2d; /* Garis di sekitar setiap item */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi ketika hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.course-item:hover {
+    background-color: #f2e0c9; /* Latar belakang kuning terang saat hover */
+    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+}
+
+/* Gaya untuk elemen pertama dan genap/ganjil */
+.course-item:nth-child(even) {
+    background-color: #f2f2f2; /* Latar belakang abu-abu muda untuk item genap */
+}
+
+.course-item:nth-child(odd) {
+    background-color: #ffffff; /* Latar belakang putih untuk item ganjil */
+}
+
+.course-item:focus {
+    outline: none;
+    box-shadow: 0 0 10px #8b6237; /* Sorot item saat fokus */
+}
+/* Styling untuk halaman About Us */
+.about-us {
+    background-image: url('jpg/bguas.jpeg'); /* Path gambar relatif */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px;
+    color: white;
+}
+
+
+.about-us h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}

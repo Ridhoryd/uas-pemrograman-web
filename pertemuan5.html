@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 5 - Hyperlink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 5 - Hyperlink</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <p>Di pertemuan kelima ini, kita akan mempelajari tentang <b>Hyperlink</b> yang digunakan untuk menghubungkan halaman-halaman web dengan halaman lainnya. Hyperlink sangat penting karena memungkinkan pengguna untuk menavigasi antara berbagai halaman di internet.</p>
+
+            <h4>1. Pengertian Hyperlink:</h4>
+            <p>Hyperlink adalah elemen dalam HTML yang digunakan untuk menghubungkan halaman web satu dengan lainnya. Elemen hyperlink ditandai dengan tag <code>&lt;a&gt;</code> dan atribut <code>href</code> untuk menentukan alamat URL yang akan dituju.</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;Klik di sini&lt;/a&gt;
+            </pre>
+            <p>Dengan menggunakan hyperlink, pengguna dapat berpindah dari satu halaman ke halaman lain, baik itu di situs yang sama maupun berbeda. Hyperlink juga dapat digunakan untuk membuat tombol, daftar tautan, dan menu navigasi di website.</p>
+
+            <h4>2. Menambahkan Hyperlink untuk Navigasi:</h4>
+            <p>Hyperlink juga dapat digunakan untuk membuat navigasi dalam website. Anda bisa menautkan berbagai halaman dalam situs Anda untuk memudahkan pengunjung mengakses informasi lain di dalam website. Contoh penerapan navigasi menggunakan <code>&lt;a&gt;</code> adalah sebagai berikut:</p>
+            <pre>
+&lt;nav&gt;
+    &lt;a href="home.html"&gt;Beranda&lt;/a&gt;
+    &lt;a href="about.html"&gt;Tentang Kami&lt;/a&gt;
+    &lt;a href="services.html"&gt;Layanan&lt;/a&gt;
+    &lt;a href="contact.html"&gt;Kontak&lt;/a&gt;
+&lt;/nav&gt;
+            </pre>
+            <p>Dengan menggunakan elemen <code>&lt;nav&gt;</code> dan <code>&lt;a&gt;</code>, kita bisa membuat menu navigasi yang dapat diakses dengan mudah oleh pengguna untuk berpindah antar halaman di dalam website.</p>
+
+            <h4>3. Hyperlink untuk Navigasi Antar Halaman:</h4>
+            <p>Selain navigasi di dalam satu website, hyperlink juga dapat digunakan untuk menghubungkan halaman web ke halaman eksternal atau bahkan ke file lainnya, seperti PDF atau gambar. Berikut adalah contoh penggunaan hyperlink untuk navigasi antar halaman:</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;Kunjungi Website Example&lt;/a&gt;
+&lt;a href="file.pdf"&gt;Download PDF&lt;/a&gt;
+            </pre>
+            <p>Perhatikan bahwa kita dapat menggunakan hyperlink untuk berbagai tujuan: dari menavigasi ke halaman lain dalam website, menuju ke URL eksternal, atau bahkan mengunduh file.</p>
+
+            <h4>4. Membuka Hyperlink di Jendela Baru:</h4>
+            <p>Untuk membuka halaman yang ditautkan di jendela atau tab baru, Anda bisa menambahkan atribut <code>target="_blank"</code> pada tag <code>&lt;a&gt;</code>.</p>
+            <pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;Kunjungi Website&lt;/a&gt;
+            </pre>
+            <p>Dengan menambahkan atribut <code>target="_blank"</code>, halaman tujuan akan terbuka di tab atau jendela baru sehingga pengguna tidak akan meninggalkan halaman website Anda.</p>
+
+            <h4>5. Hyperlink dalam Elemen Lain:</h4>
+            <p>Selain teks, hyperlink juga bisa diterapkan pada elemen lain, seperti gambar atau tombol. Contoh berikut memperlihatkan bagaimana cara menggunakan gambar sebagai tautan:</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;
+    &lt;img src="image.jpg" alt="Deskripsi Gambar"&gt;
+&lt;/a&gt;
+            </pre>
+            <p>Di atas, gambar menjadi hyperlink yang dapat diklik dan akan membawa pengguna ke halaman yang ditentukan dalam atribut <code>href</code>.</p>
+
+            <h4>6. Penggunaan Hyperlink dalam Website:</h4>
+            <p>Hyperlink sangat penting dalam pembuatan website, karena memberikan cara bagi pengguna untuk menavigasi dari satu halaman ke halaman lainnya. Tanpa hyperlink, website hanya menjadi kumpulan halaman statis yang terpisah tanpa saling terhubung.</p>
+            <p>Dengan memanfaatkan hyperlink dengan bijak, kita dapat membuat website yang lebih mudah diakses dan menyediakan pengalaman yang lebih baik bagi pengunjung. Hyperlink membantu menghubungkan berbagai jenis konten, memperkaya pengalaman pengguna, dan meningkatkan kegunaan website.</p>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan6.html">Ke Pertemuan 6 - Bullet Numbering dan List</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 8 - Formulir HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 8 - Formulir HTML</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <h4>1. Pengenalan Formulir HTML:</h4>
+            <p>Formulir HTML digunakan untuk mengumpulkan data dari pengguna. Elemen yang paling sering digunakan adalah <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, dan <code>&lt;button&gt;</code>.</p>
+            <p>Formulir memungkinkan pengguna untuk memasukkan data yang kemudian bisa diproses oleh server atau aplikasi web. Formulir dapat mencakup berbagai jenis elemen seperti teks, tombol, menu dropdown, dan lainnya.</p>
+
+            <h4>2. Struktur Dasar Formulir:</h4>
+            <p>Berikut adalah struktur dasar formulir di HTML:</p>
+            <pre>
+&lt;form action="submit_form.php" method="POST"&gt;
+    &lt;label for="nama"&gt;Nama:&lt;/label&gt;
+    &lt;input type="text" id="nama" name="nama"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+            </pre>
+            <p>Penjelasan:</p>
+            <ul>
+                <li><code>&lt;form&gt;</code>: Digunakan untuk mendefinisikan sebuah formulir HTML.</li>
+                <li><code>&lt;input&gt;</code>: Digunakan untuk membuat kolom input data.</li>
+                <li><code>&lt;button&gt;</code>: Digunakan untuk membuat tombol kirim pada formulir.</li>
+            </ul>
+
+            <h4>3. Jenis-jenis Input dalam Formulir:</h4>
+            <p>Formulir HTML dapat memiliki berbagai jenis input, seperti:</p>
+            <ul>
+                <li><strong>Text</strong>: <code>&lt;input type="text"&gt;</code> untuk menerima teks.</li>
+                <li><strong>Email</strong>: <code>&lt;input type="email"&gt;</code> untuk menerima email yang valid.</li>
+                <li><strong>Checkbox</strong>: <code>&lt;input type="checkbox"&gt;</code> untuk pilihan dengan kotak centang.</li>
+                <li><strong>Radio</strong>: <code>&lt;input type="radio"&gt;</code> untuk pilihan tunggal dalam sekelompok pilihan.</li>
+                <li><strong>Submit</strong>: <code>&lt;button type="submit"&gt;</code> untuk mengirim formulir.</li>
+            </ul>
+
+            <h4>4. Menambahkan Dropdown Menu:</h4>
+            <p>Formulir juga dapat memiliki menu dropdown untuk memilih dari beberapa pilihan yang sudah ditentukan:</p>
+            <pre>
+&lt;label for="kota"&gt;Pilih Kota:&lt;/label&gt;
+&lt;select name="kota" id="kota"&gt;
+    &lt;option value="jakarta"&gt;Jakarta&lt;/option&gt;
+    &lt;option value="bandung"&gt;Bandung&lt;/option&gt;
+    &lt;option value="surabaya"&gt;Surabaya&lt;/option&gt;
+&lt;/select&gt;
+            </pre>
+            <p>Penjelasan:</p>
+            <ul>
+                <li><code>&lt;select&gt;</code>: Digunakan untuk membuat dropdown menu.</li>
+                <li><code>&lt;option&gt;</code>: Digunakan untuk mendefinisikan setiap pilihan dalam dropdown.</li>
+            </ul>
+
+            <h4>5. Menambahkan Area Teks:</h4>
+            <p>Formulir juga memungkinkan untuk memasukkan input berupa teks yang lebih panjang, seperti komentar atau pesan, dengan menggunakan <code>&lt;textarea&gt;</code>.</p>
+            <pre>
+&lt;label for="pesan"&gt;Pesan Anda:&lt;/label&gt;
+&lt;textarea id="pesan" name="pesan"&gt;&lt;/textarea&gt;
+            </pre>
+
+            <h4>6. Mengirim Data Formulir:</h4>
+            <p>Untuk mengirim data formulir ke server, kita menggunakan metode <code>POST</code> atau <code>GET</code>. <code>POST</code> digunakan ketika data yang dikirim lebih sensitif atau besar, sedangkan <code>GET</code> digunakan ketika data yang dikirimkan lebih kecil dan tidak bersifat rahasia.</p>
+            <p>Contoh menggunakan metode POST pada formulir:</p>
+            <pre>
+&lt;form action="submit_form.php" method="POST"&gt;
+    ...
+&lt;/form&gt;
+            </pre>
+
+            <h4>7. Tugas dan Latihan:</h4>
+            <p>Setelah memahami materi ini, Anda diharapkan dapat:</p>
+            <ul>
+                <li>Membuat formulir untuk memasukkan data pengguna seperti nama, email, dan pesan.</li>
+                <li>Menggunakan berbagai jenis input dalam formulir HTML.</li>
+                <li>Menerapkan metode pengiriman data yang sesuai dengan kebutuhan.</li>
+            </ul>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan9.html">Ke Pertemuan 9 - Tabel HTML</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

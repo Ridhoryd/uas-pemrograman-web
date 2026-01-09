@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 3 - Tabel dan Formulir HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 3 - Tabel dan Formulir HTML</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <p>Di pertemuan ini, kita akan membahas cara membuat tabel dan formulir menggunakan HTML. Keduanya adalah elemen dasar yang sangat penting dalam pembuatan halaman web dinamis.</p>
+
+            <h4>1. Tabel HTML:</h4>
+            <p>Tabel digunakan untuk menyajikan data dalam bentuk baris dan kolom. Berikut adalah contoh elemen-elemen yang digunakan dalam pembuatan tabel:</p>
+            <ul>
+                <li><strong>&lt;table&gt;</strong>: Digunakan untuk mendefinisikan tabel.</li>
+                <li><strong>&lt;tr&gt;</strong>: Digunakan untuk mendefinisikan baris tabel.</li>
+                <li><strong>&lt;th&gt;</strong>: Digunakan untuk mendefinisikan header tabel.</li>
+                <li><strong>&lt;td&gt;</strong>: Digunakan untuk mendefinisikan sel tabel.</li>
+            </ul>
+            <p>Berikut adalah contoh kode tabel HTML:</p>
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nama&lt;/th&gt;
+        &lt;th&gt;Usia&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Mary&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+
+            <h4>2. Formulir HTML:</h4>
+            <p>Formulir digunakan untuk mengumpulkan data dari pengguna. HTML menyediakan elemen-elemen untuk membuat berbagai jenis input data, seperti teks, radio buttons, checkbox, dan tombol kirim.</p>
+            <ul>
+                <li><strong>&lt;form&gt;</strong>: Digunakan untuk mendefinisikan formulir.</li>
+                <li><strong>&lt;input&gt;</strong>: Digunakan untuk membuat elemen input seperti teks, radio buttons, checkbox, dan lainnya.</li>
+                <li><strong>&lt;textarea&gt;</strong>: Digunakan untuk membuat area teks yang lebih besar.</li>
+                <li><strong>&lt;select&gt;</strong>: Digunakan untuk membuat dropdown list.</li>
+            </ul>
+            <p>Berikut adalah contoh kode formulir HTML:</p>
+            <pre>
+&lt;form action="submit_form" method="post"&gt;
+    &lt;label for="name"&gt;Nama&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    &lt;label for="age"&gt;Usia&lt;/label&gt;
+    &lt;input type="number" id="age" name="age"&gt;
+    &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+            </pre>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan4.html">Ke Pertemuan 4 - Menampilkan Gambar, Suara, dan Video</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

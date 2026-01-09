@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 4 - Menampilkan Gambar, Suara, dan Video</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 4 - Menampilkan Gambar, Suara, dan Video</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <p>Pada pertemuan ini, kita akan mempelajari cara menampilkan berbagai media seperti gambar, suara, dan video di halaman web menggunakan HTML. Ini adalah komponen penting untuk menciptakan website yang interaktif dan menarik.</p>
+
+            <h4>1. Menampilkan Gambar di HTML:</h4>
+            <p>Untuk menampilkan gambar di website, kita menggunakan elemen <code>&lt;img&gt;</code>. Gambar bisa dimasukkan dengan menentukan atribut <code>src</code> untuk menunjukkan lokasi gambar dan <code>alt</code> untuk memberikan deskripsi jika gambar tidak dapat ditampilkan.</p>
+            <pre>
+&lt;img src="gambar.jpg" alt="Deskripsi Gambar" width="500"&gt;
+            </pre>
+            <p>Atribut lainnya yang sering digunakan adalah <code>width</code> dan <code>height</code> untuk mengatur ukuran gambar.</p>
+
+            <h4>2. Menampilkan Video di HTML:</h4>
+            <p>Untuk menampilkan video, kita menggunakan elemen <code>&lt;video&gt;</code>. Video ini bisa disertai dengan kontrol pemutaran seperti play, pause, dan volume dengan menambahkan atribut <code>controls</code>.</p>
+            <pre>
+&lt;video width="640" height="360" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+            </pre>
+            <p>Jika video yang Anda gunakan berformat lain seperti .avi atau .mov, Anda bisa mengganti <code>type="video/mp4"</code> dengan format yang sesuai, misalnya <code>type="video/avi"</code>.</p>
+
+            <h4>3. Menampilkan Audio di HTML:</h4>
+            <p>Audio dapat dimasukkan dengan menggunakan elemen <code>&lt;audio&gt;</code>. Sama halnya dengan video, kita juga dapat memberikan kontrol pemutaran untuk audio dengan atribut <code>controls</code>.</p>
+            <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+            <p>Elemen <code>&lt;audio&gt;</code> memungkinkan pengguna untuk mendengarkan suara atau musik langsung di halaman web. Anda juga bisa menambahkan beberapa <code>&lt;source&gt;</code> untuk mendukung berbagai format file audio.</p>
+
+            <h4>4. Menggabungkan Video dan Audio di Halaman yang Sama:</h4>
+            <p>Tidak jarang Anda ingin menampilkan video dan audio dalam satu halaman secara bersamaan. Anda dapat menggabungkan elemen-elemen ini sesuai kebutuhan dengan menggunakan tag HTML untuk video dan audio secara bersamaan.</p>
+            <pre>
+&lt;video width="640" height="360" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+
+            <h4>5. Menyematkan Video dari Layanan Lain (Contoh: YouTube):</h4>
+            <p>Selain menyematkan video lokal, Anda juga bisa menyematkan video dari layanan lain seperti YouTube. Ini memungkinkan Anda untuk menampilkan video tanpa perlu menyimpannya di server Anda.</p>
+            <pre>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+            </pre>
+            <p>Dengan menggunakan <code>&lt;iframe&gt;</code>, Anda dapat menyematkan video dari platform lain seperti YouTube atau Vimeo. Cukup salin embed code yang disediakan oleh platform tersebut dan masukkan ke dalam halaman web Anda.</p>
+
+            <h4>6. Penggunaan Video dan Audio pada Website:</h4>
+            <p>Video dan audio sering digunakan pada website untuk membuatnya lebih interaktif dan menarik. Penggunaan video dapat meningkatkan pengalaman pengguna, sementara audio digunakan untuk efek suara atau musik latar belakang.</p>
+            <p>Pastikan Anda mempertimbangkan ukuran file dan format yang digunakan agar website tetap ringan dan dapat diakses dengan cepat.</p>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan5.html">Ke Pertemuan 5 - Hyperlink</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

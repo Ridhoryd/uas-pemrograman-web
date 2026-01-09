@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 10 - Menampilkan Gambar, Suara, dan Video</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 10 - Menampilkan Gambar, Suara, dan Video</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <p>Pada pertemuan ini, kita akan mempelajari cara menampilkan berbagai jenis media seperti gambar, suara, dan video di halaman web menggunakan HTML.</p>
+
+            <h4>1. Menampilkan Gambar di HTML:</h4>
+            <p>Untuk menampilkan gambar, kita menggunakan elemen &lt;img&gt;. Berikut adalah contoh penggunaannya:</p>
+            <pre>
+&lt;img src="gambar.jpg" alt="Deskripsi Gambar" width="500" height="300"&gt;
+            </pre>
+            <p>Elemen &lt;img&gt; tidak memerlukan tag penutup dan memiliki atribut penting seperti:</p>
+            <ul>
+                <li><strong>src:</strong> Menunjukkan sumber gambar.</li>
+                <li><strong>alt:</strong> Menyediakan deskripsi gambar jika gambar gagal dimuat.</li>
+                <li><strong>width dan height:</strong> Menentukan ukuran gambar.</li>
+            </ul>
+
+            <h4>2. Menampilkan Suara di HTML:</h4>
+            <p>Untuk menambahkan file audio di halaman web, kita menggunakan elemen &lt;audio&gt;. Berikut adalah cara penggunaannya:</p>
+            <pre>
+&lt;audio controls&gt;
+  &lt;source src="suara.mp3" type="audio/mpeg"&gt;
+  Browser Anda tidak mendukung elemen audio.
+&lt;/audio&gt;
+            </pre>
+            <p>Atribut <strong>controls</strong> menambahkan kontrol untuk memutar audio, seperti play, pause, dan volume. Atribut <strong>src</strong> adalah lokasi file audio yang akan diputar.</p>
+
+            <h4>3. Menampilkan Video di HTML:</h4>
+            <p>Untuk menampilkan video, kita menggunakan elemen &lt;video&gt; yang hampir serupa dengan elemen audio. Berikut adalah contohnya:</p>
+            <pre>
+&lt;video width="640" height="360" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Browser Anda tidak mendukung elemen video.
+&lt;/video&gt;
+            </pre>
+            <p>Seperti elemen &lt;audio&gt;, elemen &lt;video&gt; juga menggunakan atribut <strong>controls</strong> untuk menambahkan kontrol playback.</p>
+
+            <h4>4. Penggunaan Video dan Audio Secara Bersamaan:</h4>
+            <p>Anda juga dapat menggabungkan audio dan video dalam halaman yang sama. Berikut adalah contohnya:</p>
+            <pre>
+&lt;video width="640" height="360" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;/audio&gt;
+&lt;/video&gt;
+            </pre>
+
+            <h4>5. Penyematan Media dari Layanan Lain:</h4>
+            <p>Anda juga dapat menyematkan video dari layanan lain, seperti YouTube. Berikut adalah contoh menyematkan video dari YouTube:</p>
+            <pre>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+            </pre>
+            <p>Elemen &lt;iframe&gt; memungkinkan Anda untuk menyematkan konten dari website lain, seperti video dari YouTube, di halaman web Anda.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

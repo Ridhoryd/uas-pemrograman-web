@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 9 - Tabel HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 9 - Tabel HTML</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <h4>1. Pengenalan Tabel HTML:</h4>
+            <p>Tabel HTML digunakan untuk menampilkan data yang terstruktur dalam bentuk baris dan kolom. Tabel terdiri dari beberapa elemen utama, yaitu:</p>
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nama&lt;/th&gt;
+        &lt;th&gt;Usia&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ali&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+
+            <h4>2. Atribut Tabel:</h4>
+            <p>Atribut untuk tabel bisa digunakan untuk mengatur ukuran, garis batas, dan tampilan lainnya:</p>
+            <ul>
+                <li><strong>border:</strong> Menentukan apakah tabel akan memiliki batas.</li>
+                <li><strong>cellspacing:</strong> Menentukan jarak antar sel dalam tabel.</li>
+                <li><strong>cellpadding:</strong> Menentukan jarak antara konten dan batas sel.</li>
+            </ul>
+
+            <h4>3. Menggunakan Tabel untuk Tampilan Data:</h4>
+            <p>Tabel sering digunakan untuk menampilkan data yang memiliki hubungan antar elemen. Misalnya, tabel yang berisi data karyawan, produk, atau informasi lainnya.</p>
+            <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nama&lt;/th&gt;
+        &lt;th&gt;Alamat&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ali&lt;/td&gt;
+        &lt;td&gt;Jakarta&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+
+            <h4>4. Penyempurnaan Tabel:</h4>
+            <p>Untuk memperindah tampilan tabel, Anda dapat menggunakan CSS untuk mengatur warna latar belakang, warna teks, dan border.</p>
+            <pre>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2e0c9;
+}
+            </pre>
+
+            <h4>5. Tugas dan Latihan:</h4>
+            <p>Setelah memahami materi ini, Anda diharapkan dapat:</p>
+            <ul>
+                <li>Membuat tabel untuk menampilkan data produk atau karyawan.</li>
+                <li>Menggunakan atribut untuk mengatur tampilan tabel sesuai kebutuhan.</li>
+                <li>Menerapkan CSS untuk mempercantik tabel.</li>
+            </ul>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan10.html">Ke Pertemuan 10 - Formulir HTML</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 7 - Tabel HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Pemrograman Web I</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p>Pelajaran: 05TPLE011 (Sabtu)</p>
+</header>
+
+<main class="container">
+    <section class="article">
+        <h2>Pertemuan 7 - Tabel HTML</h2>
+        <div class="content">
+            <h3>Materi:</h3>
+
+            <p>Di pertemuan ke-7 ini, kita akan mempelajari cara membuat dan mengelola tabel menggunakan HTML. Tabel HTML sangat penting untuk menyajikan data yang terstruktur dalam bentuk baris dan kolom.</p>
+
+            <h4>1. Pengertian Tabel HTML:</h4>
+            <p>Tabel HTML digunakan untuk menampilkan data yang terstruktur dalam bentuk baris dan kolom. Tabel terdiri dari beberapa elemen utama, yaitu:</p>
+            <ul>
+                <li><code>&lt;table&gt;</code>: Elemen utama yang digunakan untuk mendefinisikan tabel.</li>
+                <li><code>&lt;tr&gt;</code>: Digunakan untuk mendefinisikan baris pada tabel.</li>
+                <li><code>&lt;th&gt;</code>: Digunakan untuk mendefinisikan kolom header tabel.</li>
+                <li><code>&lt;td&gt;</code>: Digunakan untuk mendefinisikan sel dalam tabel.</li>
+            </ul>
+
+            <h4>2. Membuat Tabel Sederhana:</h4>
+            <p>Berikut adalah contoh sederhana untuk membuat tabel dengan dua kolom, yaitu Nama dan Usia:</p>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Usia&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+            <p>Penjelasan:</p>
+            <ul>
+                <li><code>&lt;th&gt;</code> digunakan untuk mendefinisikan kolom header seperti Nama dan Usia.</li>
+                <li><code>&lt;td&gt;</code> digunakan untuk mengisi data dalam tabel.</li>
+            </ul>
+
+            <h4>3. Atribut Tabel:</h4>
+            <p>Atribut untuk tabel bisa digunakan untuk mengatur ukuran, garis batas, dan tampilan lainnya:</p>
+            <ul>
+                <li><code>border</code>: Menentukan apakah tabel akan memiliki batas.</li>
+                <li><code>cellspacing</code>: Menentukan jarak antar sel dalam tabel.</li>
+                <li><code>cellpadding</code>: Menentukan jarak antara konten dan batas sel.</li>
+            </ul>
+            <p>Contoh penggunaan atribut pada tabel:</p>
+            <pre>
+&lt;table border="1" cellspacing="5" cellpadding="10"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Usia&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+
+            <h4>4. Menambahkan Border pada Tabel:</h4>
+            <p>Agar tabel lebih jelas terlihat, Anda bisa menambahkan garis batas menggunakan atribut <code>border</code>. Berikut contoh penggunaan <code>border</code> pada tabel:</p>
+            <pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Usia&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+
+            <h4>5. Menampilkan Tabel dengan Beberapa Baris dan Kolom:</h4>
+            <p>Berikut adalah contoh tabel dengan lebih banyak baris dan kolom untuk menampilkan data lebih lengkap:</p>
+            <pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Usia&lt;/th&gt;
+    &lt;th&gt;Kota&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+    &lt;td&gt;Jakarta&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Budi&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+    &lt;td&gt;Bandung&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+            <p>Di atas, kita menambahkan kolom untuk <code>Kota</code> di samping <code>Nama</code> dan <code>Usia</code>.</p>
+
+            <h4>6. Penggunaan Tabel di Website:</h4>
+            <p>Tabel sangat bermanfaat dalam menyajikan data yang terstruktur, seperti daftar harga, laporan statistik, atau informasi lainnya yang memerlukan kolom dan baris. Penggunaan tabel membantu pengguna dalam memahami data yang disajikan.</p>
+
+            <h4>7. Tugas dan Latihan:</h4>
+            <p>Setelah memahami materi ini, Anda diharapkan dapat:</p>
+            <ul>
+                <li>Membuat tabel untuk menampilkan data pribadi (Nama, Usia, Alamat, dll).</li>
+                <li>Menambahkan atribut <code>border</code>, <code>cellspacing</code>, dan <code>cellpadding</code> pada tabel.</li>
+            </ul>
+        </div>
+
+        <div class="next">
+            <p>Untuk melanjutkan ke pertemuan berikutnya, silakan klik:</p>
+            <a href="pertemuan8.html">Ke Pertemuan 8 - Formulir HTML</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Ridho Riyadi - 231011402437</p>
+            <p>Kp Duku, Kebayoran Lama Selatan, Kec. Kby Lama, Kota jakarta Selatan, DKI Jakarta 12240</p>
+            <p>Email: ridhoriyadi5@gmail.com | Instagram : @ridhoryd | WA: +6285767058698</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
